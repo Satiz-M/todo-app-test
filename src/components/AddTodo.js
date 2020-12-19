@@ -10,7 +10,7 @@ export default function AddTodo({
       <input
         type="text"
         value={inputs} //props.inputs
-        placeholder="add your add todo's"
+        placeholder="Add your todo's"
         onChange={handleChange} //props.handleChange
       ></input>
       <button type="submit" onClick={handleClick} /*props.handleClick*/>
