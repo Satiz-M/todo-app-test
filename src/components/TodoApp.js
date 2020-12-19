@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AddTodo from "./AddTodo";
 import Todolist from "./TodoList";
 
-export default function Todo() {
+export default function TodoApp() {
   const [inputs, setInputs] = useState("");
   const [todos, setTodos] = useState([]);
 
