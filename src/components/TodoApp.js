@@ -11,9 +11,11 @@ export default function Todo() {
   };
 
   const handleClick = () => {
-    setTodos([todos, ...todos]);
+    let todo = todos;
+    const newtodo = [todo, ...todos];
+    setTodos(newtodo);
     setInputs("");
-    console.log(todos);
+    console.log(todo);
   };
 
   return (
