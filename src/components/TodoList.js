@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Todolist({ todo, key }) {
+export default function Todolist({ todo }) {
   return (
     <div>
-      <p key={key}>{todo}</p>
+      <p>{todo}</p>
     </div>
   );
 }

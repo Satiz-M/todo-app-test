@@ -10,10 +10,10 @@ export default function Todo() {
     setInputs(e.target.value);
   };
 
-  const handleClick = (todo) => {
+  const handleClick = () => {
     setTodos([todos, ...todos]);
     setInputs("");
-    console.log(todo);
+    console.log(todos);
   };
 
   return (
