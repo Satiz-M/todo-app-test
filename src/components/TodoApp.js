@@ -5,8 +5,8 @@ import Todolist from "./TodoList";
 export default function Todo() {
   const [todos, setTodos] = useState([]);
 
-  const addTodo = (text) => {
-    const newTodos = [{ text }, ...todos];
+  const addTodo = (todo) => {
+    const newTodos = [todo, ...todos];
     setTodos(newTodos);
   };
 
