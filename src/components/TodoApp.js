@@ -5,18 +5,20 @@ import Todolist from "./TodoList";
 export default function Todo() {
   const [todos, setTodos] = useState([]);
 
-  const handleClick = () => {
-    setTodos([todos, ...todos]);
-    setTodos("");
+  const addTodo = (text) => {
+    const newTodos = [{ text }, ...todos];
+    setTodos(newTodos);
   };
 
   return (
     <div>
       <h1>My todo's</h1>
-      <AddTodo handleClick={handleClick} />
-      {todos.map((todo, idx) => (
-        <Todolist todo={todo} />
-      ))}
+      <AddTodo addTodo={addTodo} />
+      <div>
+        {todos.map((todo, index) => (
+          <Todolist todo={todo} key={index} />
+        ))}
+      </div>
     </div>
   );
 }

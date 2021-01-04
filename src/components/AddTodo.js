@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 
-export default function AddTodo({ handleClick }) {
-  /*props*/
+export default function AddTodo({ addTodo }) {
   const [inputs, setInputs] = useState("");
 
   const handleChange = (e) => {
     setInputs(e.target.value);
+  };
+
+  const handleClick = () => {
+    if (!inputs) return;
+    addTodo(inputs);
+    setInputs("");
   };
 
   return (
