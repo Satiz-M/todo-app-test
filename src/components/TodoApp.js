@@ -14,8 +14,8 @@ export default function Todo() {
     <div>
       <h1>My todo's</h1>
       <AddTodo handleClick={handleClick} />
-      {todos.map((todo, index) => (
-        <Todolist todo={todo} key={index} />
+      {todos.map((todo, idx) => (
+        <Todolist todo={todo} />
       ))}
     </div>
   );

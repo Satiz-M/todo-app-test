@@ -12,11 +12,11 @@ export default function AddTodo({ handleClick }) {
     <div>
       <input
         type="text"
-        value={inputs} //props.inputs
+        value={inputs}
         placeholder="add your add todo's"
-        onChange={handleChange} //props.handleChange
+        onChange={handleChange}
       ></input>
-      <button type="submit" onClick={handleClick} /*props.handleClick*/>
+      <button type="submit" onClick={handleClick}>
         Add
       </button>
     </div>
