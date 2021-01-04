@@ -2,30 +2,18 @@ import React, { useState } from "react";
 import AddTodo from "./AddTodo";
 import Todolist from "./TodoList";
 
-export default function TodoApp() {
-  const [inputs, setInputs] = useState("");
+export default function Todo() {
   const [todos, setTodos] = useState([]);
 
-  const handleChange = (e) => {
-    setInputs(e.target.value);
-  };
-
   const handleClick = () => {
-    let todo = todos;
-    const newtodo = [todo, ...todos];
-    setTodos(newtodo);
-    setInputs("");
-    console.log(todo);
+    setTodos([todos, ...todos]);
+    setTodos("");
   };
 
   return (
     <div>
       <h1>My todo's</h1>
-      <AddTodo
-        inputs={inputs}
-        handleChange={handleChange}
-        handleClick={handleClick}
-      />
+      <AddTodo handleClick={handleClick} />
       {todos.map((todo, index) => (
         <Todolist todo={todo} key={index} />
       ))}
