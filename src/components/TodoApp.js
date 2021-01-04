@@ -14,11 +14,10 @@ export default function Todo() {
     <div>
       <h1>My todo's</h1>
       <AddTodo addTodo={addTodo} />
-      <div>
-        {todos.map((todo, index) => (
-          <Todolist todo={todo} key={index} />
-        ))}
-      </div>
+
+      {todos.map((todo, index) => (
+        <Todolist todo={todo} key={index} />
+      ))}
     </div>
   );
 }
